@@ -71,7 +71,7 @@ module.exports = function(router) {
   router.delete("/api/notes/:id", function(req, res) {
   	var query = {};
   	query._id = req.params.id;
-  	notesController.delete(query,, function(err, data) {
+  	notesController.delete(query, function(err, data) {
   		res.json(data);
   	});
   });

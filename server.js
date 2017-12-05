@@ -20,12 +20,12 @@ require("./config/routes")(router);
 app.use(express.static("public"));
 
 // Connect handlebars to express app
-app.engine("handlebars", expressHandlebars( {
+app.engine("handlebars", expressHandlebars({
 	defaultlayout: "main"
 }));
 app.set("view engine", "handlebars");
 
-app.use(bodyParser.urlencoded( {
+app.use(bodyParser.urlencoded({
 	extended: false
 }));
 
